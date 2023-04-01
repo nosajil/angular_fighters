@@ -1,0 +1,26 @@
+.fighters-wrapper{
+
+
+    .fighter-item {
+        // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+        // margin: 10px 0;
+        // min-width: 300px;
+
+
+        .image-wrapper {
+            margin: 10px;
+            img {
+                width: 100px;
+            }
+        }
+
+        .infos-wrapper {
+            margin-left: 10px;
+            word-wrap: normal;
+
+            .fighter-name {
+                font-weight: bold;
+            }
+        }
+    }
+}

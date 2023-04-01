@@ -1,0 +1,46 @@
+<div *ngIf="fighter" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ fighter.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="fighter.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ fighter.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Taille</td>
+                <td><strong>{{ fighter.height }}</strong></td>
+              </tr>
+              <tr>
+                <td>Age</td>
+                <td><strong>{{ fighter.age }}</strong></td>
+              </tr>
+              <tr>
+                <td>Types</td>
+                <td>
+                  <span *ngFor="let type of fighter.capacity" class="{{ type | fighterTypeColor }}">{{ type }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Date de création</td>
+                <td><em>{{ fighter.created | date:"dd/MM/yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goToFighterList()" >Retour</a>
+          <a (click)="goToEditFighter(fighter)" >Editer</a>
+          <a (click)="deleteFighter(fighter)" >Supprimer</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!fighter' class="center">Aucun combattant à afficher !</h4>
