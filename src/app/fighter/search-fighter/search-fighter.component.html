@@ -1,1 +1,24 @@
-<p>search-fighter works!</p>
+<div class="row">
+    <div class="col s12 m6 offset-m3">
+        <div class="card">
+            <div class="card-content">
+                <div class="input-field">
+                    <input 
+                    #searchBox 
+                    type="text" 
+                    (keyup)="search(searchBox.value)" 
+                    placeholder="Rechercher un combattant"/>
+                    <div class="collection">
+                        <a  *ngFor="let fighter of fighters$ | async"
+                            (click)="goToDetail(fighter)"
+                            class="collection-item"
+                        >
+                            {{fighter.name}}
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

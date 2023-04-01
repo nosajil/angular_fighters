@@ -11,11 +11,13 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AddFighterComponent } from './fighter/add-fighter/add-fighter.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    LoginComponent,
     // AddFighterComponent 
   ],
   imports: [

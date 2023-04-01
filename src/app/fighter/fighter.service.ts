@@ -24,7 +24,11 @@ export class FighterService {
     );
   }
 
-  searchPokemonList(term: string): Observable<Fighter[]> {
+  searchFighterList(term: string): Observable<Fighter[]> {
+    if (term.length <= 1) {
+      return of([]);
+    }
+
     return this.http.get<Fighter[]>(`api/fighters/?name=${term}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, []))

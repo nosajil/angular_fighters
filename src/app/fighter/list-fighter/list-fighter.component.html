@@ -1,5 +1,8 @@
 <div class="container">
     <div class="fighters-wrapper row">
+
+        <app-search-fighter></app-search-fighter>
+        
         <div *ngFor="let fighter of fighterList" class="fighter-item col m4 s6">
             <div (click)="goToFighter(fighter)" class="card horizontal" fighterBorderCard="red">
                 <div class="image-wrapper">

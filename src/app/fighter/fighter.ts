@@ -2,7 +2,7 @@ export class Fighter {
     id: number | undefined;
     name: string | undefined;
     age: number | undefined;
-    height: string | undefined;
+    height: number | undefined;
     picture: string | undefined;
     capacity: Array<string> | undefined;
     created: Date | undefined;
@@ -10,7 +10,7 @@ export class Fighter {
     constructor(
         name: string = 'Entrer un nom...',
         age: number = 30,
-        height: string = '185',
+        height: number = 185,
         picture: string = 'https://www.ufc.com/athletes/all?filters[0]=status:23',
         capacity: string[] = ['MMA'],
         created: Date = new Date()
